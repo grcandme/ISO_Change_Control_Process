@@ -1,0 +1,14 @@
+- SEC-ARCH: Security Architect
+- SYS-ARCH: Systems Architect
+- SOFT-DEV: Software Developer
+- DATA-ARCH: Data Architect
+- ENT-ARCH: Enterprise Architect
+- TECH-ARCH: Technology Architect
+- CYBER-ANALYST: Cyber Defense Analyst
+- CYBER-INFRA: Cyber Defense Infrastructure Support
+- DATA-ANALYST: Data Analyst
+- SYS-DEV: Systems Developer
+- NET-ENG: Network Engineer
+- SYS-ADMIN: Systems Administrator
+- SEC-ASSESSOR: Secure Software Assessor
+- SEC-CONT-ASSESSOR: Security Control Assessor

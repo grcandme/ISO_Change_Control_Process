@@ -1,0 +1,78 @@
+Active Directory Security Groups 
+
+
+Added Security Groups 
+Note that the naming convention for security groups is "SG-" followed by the primary work role ID. This convention helps in identifying and managing the security groups associated with each work role.
+
+- Root
+  - Users
+    - SEC-ARCH
+      - Description: Security Architect
+      - Email: secarch@example.com
+      - Security Groups:
+        - SG-SEC-ARCH
+    - SYS-ARCH
+      - Description: Systems Architect
+      - Email: sysarch@example.com
+      - Security Groups:
+        - SG-SYS-ARCH
+    - SOFT-DEV
+      - Description: Software Developer
+      - Email: softdev@example.com
+      - Security Groups:
+        - SG-SOFT-DEV
+    - DATA-ARCH
+      - Description: Data Architect
+      - Email: dataarch@example.com
+      - Security Groups:
+        - SG-DATA-ARCH
+    - ENT-ARCH
+      - Description: Enterprise Architect
+      - Email: entarch@example.com
+      - Security Groups:
+        - SG-ENT-ARCH
+    - TECH-ARCH
+      - Description: Technology Architect
+      - Email: techarch@example.com
+      - Security Groups:
+        - SG-TECH-ARCH
+    - CYBER-ANALYST
+      - Description: Cyber Defense Analyst
+      - Email: cyberanalyst@example.com
+      - Security Groups:
+        - SG-CYBER-ANALYST
+    - CYBER-INFRA
+      - Description: Cyber Defense Infrastructure Support
+      - Email: cyberinfra@example.com
+      - Security Groups:
+        - SG-CYBER-INFRA
+    - DATA-ANALYST
+      - Description: Data Analyst
+      - Email: dataanalyst@example.com
+      - Security Groups:
+        - SG-DATA-ANALYST
+    - SYS-DEV
+      - Description: Systems Developer
+      - Email: sysdev@example.com
+      - Security Groups:
+        - SG-SYS-DEV
+    - NET-ENG
+      - Description: Network Engineer
+      - Email: neteng@example.com
+      - Security Groups:
+        - SG-NET-ENG
+    - SYS-ADMIN
+      - Description: Systems Administrator
+      - Email: sysadmin@example.com
+      - Security Groups:
+        - SG-SYS-ADMIN
+    - SEC-ASSESSOR
+      - Description: Secure Software Assessor
+      - Email: secassessor@example.com
+      - Security Groups:
+        - SG-SEC-ASSESSOR
+    - SEC-CONT-ASSESSOR
+      - Description: Security Control Assessor
+      - Email: seccontassessor@example.com
+      - Security Groups:
+        - SG-SEC-CONT-ASSESSOR
