@@ -1,0 +1,18 @@
+1.  Security Architect (SEC-ARCH): The presence of a Security Architect ensures the cultivation of knowledgeable teams and promotes a security-first culture within the organization. This includes implementing security awareness programs, access controls, and monitoring mechanisms to detect and mitigate potential insider threats.
+    
+2.  Systems Architect (SYS-ARCH): Systems Architects streamline workflows and evolve a unified operating model, which includes implementing secure access controls, segregation of duties, and monitoring systems. These measures help prevent unauthorized access, limit privileges, and detect any suspicious activities that may indicate insider threats.
+    
+3.  Data Architect (DATA-ARCH): Data Architects play a crucial role in ensuring efficient and effective data management. They establish data access controls, encryption mechanisms, and data loss prevention strategies. By implementing robust data security measures, organizations can prevent unauthorized access and data exfiltration by insiders.
+    
+4.  Cyber Analyst (CYBER-ANALYST): Cyber Analysts are responsible for analyzing security events and conducting investigations. They proactively monitor systems and networks for anomalous activities, including insider threat indicators. By leveraging threat intelligence and conducting regular assessments, they can detect and respond to insider threats promptly.
+    
+5.  User Access Management: The Active Directory framework enables organizations to manage user access permissions and enforce the principle of least privilege. By ensuring that users have only the necessary access rights to perform their duties, organizations can mitigate the risk of insiders abusing their privileges.
+    
+6.  Trouble Ticket Mapping System: The Trouble Ticket system allows users to report incidents, which are then assigned and tracked for resolution. By providing a formal process for reporting and documenting incidents, organizations can identify and investigate any suspicious activities perpetrated by insiders.
+    
+7.  Relationship Mapping: The framework includes mapping primary work roles and responsibilities, which helps ensure accountability and minimize the risk of insider threats. By clearly defining roles, separation of duties can be implemented, reducing the likelihood of collusion and unauthorized activities.
+    
+8.  Security Control Assessors (SCA): SCAs play a crucial role in assessing the effectiveness of security controls, including those designed to mitigate insider threats. By conducting regular assessments, identifying vulnerabilities, and recommending remediation measures, SCAs contribute to strengthening the organization's defense against insider threats.
+    
+9.  Incident Responders (INC_RESP) and Threat Analysts (THREAT_ANALYST): These roles focus on protecting and defending the organization's systems and networks, including responding to insider threat incidents. Their expertise in incident response, threat hunting, and forensic analysis helps identify and mitigate insider threats effectively.
+
