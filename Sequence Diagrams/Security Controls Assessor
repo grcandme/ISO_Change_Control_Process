@@ -1,0 +1,22 @@
+```mermaid
+sequenceDiagram
+    participant User
+    participant Security Controls Assessor
+    participant Caten8
+
+    User ->> Security Controls Assessor: Request for security controls assessment
+    Security Controls Assessor ->> Caten8: Accesses Caten8 system
+    Security Controls Assessor -->> Caten8: Retrieves relevant data and controls information
+    Caten8 -->> Security Controls Assessor: Sends data and controls information
+    Security Controls Assessor ->> Security Controls Assessor: Analyzes data and identifies risks
+    Security Controls Assessor ->> Security Controls Assessor: Determines risk assessment of the change (B2)
+    Security Controls Assessor ->> Security Controls Assessor: Identifies potential risks and vulnerabilities (C2)
+    Security Controls Assessor ->> Security Controls Assessor: Defines risk mitigation measures (D2)
+    Security Controls Assessor ->> Security Controls Assessor: Develops contingency plans for unforeseen issues or failures (E2)
+    Security Controls Assessor ->> Security Controls Assessor: Establishes monitoring and reporting mechanisms during change implementation (F2)
+    Security Controls Assessor -->> Caten8: Updates assessment information in Caten8
+    Security Controls Assessor -->> User: Provides risk assessment and control recommendations
+```
+
+## About the sequence
+This sequence diagram showcases the interaction between a User, Security Controls Assessor, and the Caten8 system. The User requests a security controls assessment, and the Security Controls Assessor accesses the Caten8 system to retrieve relevant data and controls information. The Security Controls Assessor then analyzes the data, identifies risks, and performs various tasks related to risk assessment and control. The Security Controls Assessor updates the assessment information in Caten8 and provides risk assessment and control recommendations to the User.

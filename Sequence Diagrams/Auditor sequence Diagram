@@ -1,0 +1,21 @@
+```mermaid
+sequenceDiagram
+    participant Auditor
+    participant Caten8
+
+    Auditor ->> Caten8: Log in to the Caten8 system
+    Caten8 -->> Auditor: Authenticate user credentials
+    Auditor ->> Caten8: Access relevant documentation and records
+    Caten8 ->> Auditor: Provide access to the requested documents
+    Auditor ->> Caten8: Review change control records
+    Caten8 -->> Auditor: Provide change control records
+    Auditor ->> Caten8: Analyze risk assessment records
+    Caten8 -->> Auditor: Provide risk assessment records
+    Auditor ->> Caten8: Evaluate compliance with policies and regulations
+    Caten8 -->> Auditor: Provide compliance documentation and records
+    Auditor ->> Caten8: Generate audit findings and recommendations
+    Caten8 -->> Auditor: Store audit findings and recommendations
+    Auditor ->> Caten8: Complete the assessment process
+    Caten8 -->> Auditor: Confirm completion of the assessment
+
+```
