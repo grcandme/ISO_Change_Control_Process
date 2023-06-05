@@ -1392,6 +1392,8 @@ graph TB
         AG -->|Has| BE[Retention Period]
     end
 
+
+
 #### User Journey
 ```mermaid
 graph TB
@@ -1476,6 +1478,7 @@ graph TB
     end
 
 ```
+
 
 ### Contextual Relationships
 ```mermaid
