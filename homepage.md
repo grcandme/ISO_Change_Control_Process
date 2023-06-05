@@ -177,6 +177,21 @@ end
 
 ```
 
+# Playbooks and Trouble Tickets 
+
+```mermaid
+graph LR
+    Problem --> Change
+    Problem --> Incident
+    Problem --> Request
+    Change --> Implementation
+    Change --> Validation
+    Incident --> Investigation
+    Incident --> Resolution
+    Request --> Evaluation
+    Request --> Fulfillment
+
+```
 
 
 # Ticketing System
@@ -212,6 +227,7 @@ sequenceDiagram
 #### Problems are related to alignment, fresh data, and effective alerts. Resilience affects changes, incidents, requests, problems, alignment, fresh data, and effective alerts. Events and incidents are affected by system resilience.
 
 # Graphic Representation of the system with high level components. 
+
 See [Trouble Tickets](./Relationship%20Diagrams/Trouble%20Tickets/)
 
 ```mermaid
