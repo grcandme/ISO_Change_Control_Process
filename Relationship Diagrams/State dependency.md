@@ -95,3 +95,124 @@ stateDiagram
         Draft --> Finalized
     }
 ```
+
+
+# Flow and Sequence 
+```mermaid
+graph LR
+    A(User) --> B(WorkRole)
+    B --> C(Problem)
+    B --> D(Change)
+    B --> E(Request)
+    C --> F(ChangeControlRecord)
+    D --> F
+    E --> F
+    F --> G(DocumentControlInformation)
+    F --> H(ChangeImplementationPlan)
+    F --> I(CommunicationAndNotification)
+    F --> J(RiskAssessmentAndControl)
+    F --> K(DocumentReferences)
+    C(TroubleTickets) --> F
+    D --> L(Evaluation)
+    E --> M(Fulfillment)
+    N(Framework) --> O(Loops)
+    N --> P(Functions)
+    N --> Q(Playbooks)
+    N --> R(Mappings)
+    N --> S(Roles)
+    R --> Q
+    S --> Q
+    T(Blocks) --> U(Task)
+    V(User) --> W(RoleSelected)
+    W --> X(TroubleTickets)
+    X --> Y(View)
+    Y --> Z(Create)
+    Y --> AA(Edit)
+    AA --> Y
+    Z --> Y
+    F(ChangeControlRecord) --> AB(New)
+    AB --> AC(InProgress)
+    AC --> AD(Completed)
+    H(ChangeImplementationPlan) --> AE(Draft)
+    AE --> AF(Finalized)
+```
+
+# Applying Labels and relationships
+
+```mermaid
+graph LR
+    A(User) -->|performs| B(WorkRole)
+    B -->|has| C(Problem)
+    B -->|initiates| D(Change)
+    B -->|submits| E(Request)
+    C -->|triggers| F(ChangeControlRecord)
+    D -->|relates to| F
+    E -->|triggers| F
+    F -->|has| G(DocumentControlInformation)
+    F -->|has| H(ChangeImplementationPlan)
+    F -->|notifies| I(CommunicationAndNotification)
+    F -->|assesses| J(RiskAssessmentAndControl)
+    F -->|refers to| K(DocumentReferences)
+    C(TroubleTickets) -->|triggers| F
+    D -->|relates to| L(Evaluation)
+    E -->|relates to| M(Fulfillment)
+    N(Framework) -->|consists of| O(Loops)
+    N -->|consists of| P(Functions)
+    N -->|consists of| Q(Playbooks)
+    N -->|consists of| R(Mappings)
+    N -->|consists of| S(Roles)
+    R -->|used by| Q
+    S -->|used by| Q
+    T(Blocks) -->|contains| U(Task)
+    V(User) -->|selects| W(RoleSelected)
+    W -->|accesses| X(TroubleTickets)
+    X -->|views| Y(View)
+    Y -->|creates| Z(Create)
+    Y -->|edits| AA(Edit)
+    AA -->|reverts| Y
+    Z -->|reverts| Y
+    F(ChangeControlRecord) -->|creates| AB(New)
+    AB -->|starts| AC(InProgress)
+    AC -->|finishes| AD(Completed)
+    H(ChangeImplementationPlan) -->|creates| AE(Draft)
+    AE -->|finalizes| AF(Finalized)
+```
+
+# Simplification
+
+```mermaid
+graph LR
+    A(User) -->|performs| B(WorkRole)
+    B -->|has| C(Problem)
+    B -->|initiates| D(Change)
+    B -->|submits| E(Request)
+    C -->|triggers| F(ChangeControlRecord)
+    D -->|relates to| F
+    E -->|triggers| F
+    F -->|has| G(DocumentControlInformation)
+    F -->|has| H(ChangeImplementationPlan)
+    F -->|notifies| I(CommunicationAndNotification)
+    F -->|assesses| J(RiskAssessmentAndControl)
+    F -->|refers to| K(DocumentReferences)
+    C(TroubleTickets) -->|triggers| F
+    D -->|relates to| L(Evaluation)
+    E -->|relates to| M(Fulfillment)
+    N(Framework) -->|consists of| O(Loops)
+    N -->|consists of| P(Functions)
+    N -->|consists of| Q(Playbooks)
+    N -->|consists of| R(Mappings)
+    N -->|consists of| S(Roles)
+    R -->|used by| Q
+    S -->|used by| Q
+    T(Blocks) -->|contains| U(Task)
+    V(User) -->|selects| W(RoleSelected)
+    W -->|accesses| X(TroubleTickets)
+    X -->|views| Y(View)
+    Y -->|creates, reverts| Z(Create)
+    Y -->|edits| AA(Edit)
+    F(ChangeControlRecord) -->|creates| AB(New)
+    AB -->|starts| AC(InProgress)
+    AC -->|finishes| AD(Completed)
+    H(ChangeImplementationPlan) -->|creates| AE(Draft)
+    AE -->|finalizes| AF(Finalized)
+```

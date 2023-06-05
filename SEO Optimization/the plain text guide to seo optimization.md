@@ -589,3 +589,111 @@ A --> Start
 End --> X
 X --> A
 ```
+# Integrating improved process
+
+```mermaid
+graph LR
+    A(User) -->|performs| B(WorkRole)
+    B -->|has| C(Problem)
+    B -->|initiates| D(Change)
+    B -->|submits| E(Request)
+    C -->|triggers| F(ChangeControlRecord)
+    D -->|relates to| F
+    E -->|triggers| F
+    F -->|has| G(DocumentControlInformation)
+    F -->|has| H(ChangeImplementationPlan)
+    F -->|notifies| I(CommunicationAndNotification)
+    F -->|assesses| J(RiskAssessmentAndControl)
+    F -->|refers to| K(DocumentReferences)
+    C(TroubleTickets) -->|triggers| F
+    D -->|relates to| L(Evaluation)
+    E -->|relates to| M(Fulfillment)
+    N(Framework) -->|consists of| O(Loops)
+    N -->|consists of| P(Functions)
+    N -->|consists of| Q(Playbooks)
+    N -->|consists of| R(Mappings)
+    N -->|consists of| S(Roles)
+    R -->|used by| Q
+    S -->|used by| Q
+    T(Blocks) -->|contains| U(Task)
+    V(User) -->|selects| W(RoleSelected)
+    W -->|accesses| X(TroubleTickets)
+    X -->|views| Y(View)
+    Y -->|creates, reverts| Z(Create)
+    Y -->|edits| AA(Edit)
+    F(ChangeControlRecord) -->|creates| AB(New)
+    AB -->|starts| AC(InProgress)
+    AC -->|finishes| AD(Completed)
+    H(ChangeImplementationPlan) -->|creates| AE(Draft)
+    AE -->|finalizes| AF(Finalized)
+
+subgraph Playbook
+    Start(Start)
+    Access("Role: Analyst")
+    Add("Role: Webmaster")
+    Navigate("Role: Analyst")
+    SetDate("Role: Analyst")
+    Analyze("Role: Analyst")
+    Sort("Role: Analyst")
+    Investigate("Role: Analyst")
+    Reverse("Role: Analyst")
+    Optimize("Role: Content Specialist")
+    Monitor("Role: Analyst")
+    End(End)
+end
+
+subgraph Blocks
+    Block1("Keyword Research")
+    Block2("On-Page Optimization")
+    Block3("Off-Page Optimization and Link Building")
+end
+
+subgraph Task List
+    T1("Set up Google Search Console")
+    T2("Verify ownership of the website")
+    T3("Navigate to Performance tab")
+    T4("Set the date filter to last 28 days")
+    T5("Analyze query report")
+    T6("Sort queries by positioning")
+    T7("Search top-ranking articles for each query")
+    T8("Reverse-engineer top-ranking articles")
+    T9("Optimize content based on insights")
+    T10("Monitor rankings, impressions, and clicks")
+    T11("Conduct in-depth keyword research")
+    T12("Optimize meta tags")
+    T13("Ensure search engine-friendly URLs")
+    T14("Improve content quality")
+    T15("Develop link building strategy")
+    T16("Leverage social media platforms")
+end
+
+Start --> Access
+Access --> Add
+Add --> Navigate
+Navigate --> SetDate
+SetDate --> Analyze
+Analyze --> Sort
+Sort --> Investigate
+Investigate --> Reverse
+Reverse --> Optimize
+Optimize --> Monitor
+Monitor --> End
+
+Access --> T1
+Add --> T2
+Navigate --> T3
+SetDate --> T4
+Analyze --> T5
+Sort --> T6
+Investigate --> T7
+Reverse --> T8
+Optimize --> T9
+Monitor --> T10
+
+Block1 --> T11
+Block2 --> T12
+Block2 --> T13
+Block2 --> T14
+Block3 --> T15
+Block3 --> T16
+```
