@@ -29,6 +29,50 @@ If you are looking for resources related to [Active Directory](./Active%20Direct
 If you are looking for [Active Directory Structure](./Active%20Directory/active%20directory%20structure.md)
 And check out the [Active Directory Security Groups](./Active%20Directory/active%20directory%20security%20groups.md)
 
+## About Active Directory
+    Functions:
+    Active Directory (AD): This is the central component of the system.
+    Trouble Ticket Mapping System (TTMS): Manages trouble tickets and their assignments.
+    Primary Work Role ID Mapping (PWRI): Maps primary work roles to specific functions.
+    Relationship Mapping (RM): Maps relationships between different system functions.
+    Users:
+    Users are divided into several categories, including:
+    SEC-ARCH (Security Architect)
+    SYS-ARCH (Systems Architect)
+    SOFT-DEV (Software Developer)
+    DATA-ARCH (Data Architect)
+    ENT-ARCH (Enterprise Architect)
+    TECH-ARCH (Technical Architect)
+    CYBER-ANALYST (Cybersecurity Analyst)
+    CYBER-INFRA (Cybersecurity Infrastructure Specialist)
+    DATA-ANALYST (Data Analyst)
+    SYS-DEV (Systems Developer)
+    NET-ENG (Network Engineer)
+    SYS-ADMIN (System Administrator)
+    SEC-ASSESSOR (Security Assessor)
+    SEC-CONT-ASSESSOR (Security Controls Assessor)
+    Trouble Ticket Mapping System (TTMS):
+    Manages trouble tickets and their lifecycle.
+    Users can create trouble tickets (TT), which are assigned to specific users (AT) and can be updated by other users (UB).
+    Trouble tickets can be marked as resolved.
+    Primary Work Role ID Mapping (PWRI):
+    Maps primary work roles to specific functions within the system.
+    There are various roles, such as Security Architect, Systems Architect, Software Developer, Data Architect, and Enterprise Architect, each associated with specific responsibilities.
+    Relationship Mapping (RM):
+    Maps relationships between different system functions.
+    The relationships include Ticket Creation (TC), Ticket Assignment (TA), Ticket Tracking (TT), Ticket Resolution (TR), and Data Management (DM).
+    Each relationship is associated with specific actions and responsibilities.
+    Mappings:
+    The diagram includes mappings of various roles and their associated knowledge, skills, and abilities (KSA).
+    Roles such as Information System Owner (ISO), Authorizing Official (AO), Chief Information Officer (CIO), Security Control Assessor (SCA), System Administrator (SYS_ADMIN), Network Administrator (NET_ADMIN), Database Administrator (DB_ADMIN), Security Architect (SEC_ARCH), Application Developer (APP_DEV), Incident Responder (INC_RESP), and Threat Analyst (THREAT_ANALYST) are mapped to specific KSAs.
+## Active Directory Relationship Considerations
+### Active Directory:
+#### The Active Directory (AD) consists of a root node (A) and a Users node (B). The Users node (B) has multiple child nodes representing different user categories, such as SEC-ARCH, SYS-ARCH, SOFT-DEV, DATA-ARCH, ENT-ARCH, TECH-ARCH, CYBER-ANALYST, CYBER-INFRA, DATA-ANALYST, SYS-DEV, NET-ENG, SYS-ADMIN, SEC-ASSESSOR, and SEC-CONT-ASSESSOR.
+### Trouble Ticket Mapping System:
+#### The Trouble Ticket Mapping System allows users (Q) to create trouble tickets (R). Trouble tickets can be assigned to specific users (S), who can then update the ticket. Tickets can also be marked as resolved (T).
+### Primary Work Role ID Mapping:
+#### The Primary Work Role ID Mapping indicates that the root node (A) has associations (has) with different user categories.Each user category (C, D, E, F, G) is associated with the root node (A), indicating that they belong to the Active Directory structure.
+
 # Business Continuity
 [Business Continuity](./Business%20Continuity/business%20continuity.md) and [Financial Considerations](./Financial%20Considerations/Financial%20Considerations.md) along with the [Roles](./Financial%20Considerations/Roles%20supporting%20financial%20considerations.md) 
 that support your financial considerations in Cyber Security and Change Management. 
