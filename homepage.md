@@ -4,8 +4,28 @@ Harnessing the Power of the Framework: A Step-by-Step Guide
 # Introduction:
 Implementing a comprehensive framework is essential for organizations aiming to streamline their processes and optimize productivity. In this article, we will guide you through the practical utilization of a framework, using a specific example. By leveraging the components and relationships within the framework, you can effectively manage trouble tickets, assign roles, and orchestrate tasks. Let's dive into the step-by-step process.
 
+```mermaid
+graph LR
+    A(Start)
+    B(User) --> C(WorkRole)
+    C --> D(Problem)
+    C --> E(Change)
+    C --> F(Request)
+    F --> G(ControlRecord)
+    G --> H(DocumentControlInformation)
+    G --> I(ChangeImplementationPlan)
+    G --> J(CommunicationAndNotification)
+    G --> K(RiskAssessmentAndControl)
+    G --> L(DocumentReferences)
+    E --> M(Fulfillment)
+    E --> N(ProblemResolution)
+    N --> O(End)
+```
+
 # Step 1: Understanding the Framework:
 The framework consists of five key components: Loops, Functions, Playbooks, Mappings, and Roles. Loops and Functions work together to define the workflow, while Playbooks provide guidance on executing specific tasks. Mappings establish relationships between different components, and Roles define the responsibilities of individuals within the system.
+
+
 
 # Step 2: Defining Roles and Access:
 To begin, users (A) must select their specific work role (B). Each work role has a defined set of responsibilities, which allows users to access relevant features and perform specific tasks. For example, a user may select the "Analyst" role, granting them access to various functionalities.
@@ -571,6 +591,31 @@ classDiagram
   Fulfillment -- ProblemResolution
   Evaluation -- ProblemResolution
 ```
+# Entitites and Relationships 
+Entities: The diagram includes several entities represented by nodes, such as User (A), WorkRole (B), Problem (C), Change (D), Request (E), ChangeControlRecord (F), DocumentControlInformation (G), ChangeImplementationPlan (H), CommunicationAndNotification (I), RiskAssessmentAndControl (J), DocumentReferences (K), Evaluation (L), Fulfillment (M), Framework (N), Loops (O), Functions (P), Playbooks (Q), Mappings (R), Roles (S), Blocks (T), Task (U), and View (Y).
+Relationships: The arrows connecting the entities represent relationships or actions between them. For example:
+A performs B: User (A) performs the WorkRole (B).
+B has C: WorkRole (B) has a relation with the Problem (C).
+B initiates D: WorkRole (B) initiates the Change (D).
+B submits E: WorkRole (B) submits the Request (E).
+C triggers F: Problem (C) triggers the ChangeControlRecord (F).
+D relates to F: Change (D) relates to the ChangeControlRecord (F).
+E triggers F: Request (E) triggers the ChangeControlRecord (F).
+F has G: ChangeControlRecord (F) has a relation with the DocumentControlInformation (G).
+F has H: ChangeControlRecord (F) has a relation with the ChangeImplementationPlan (H).
+F notifies I: ChangeControlRecord (F) notifies the CommunicationAndNotification (I).
+F assesses J: ChangeControlRecord (F) assesses the RiskAssessmentAndControl (J).
+F refers to K: ChangeControlRecord (F) refers to the DocumentReferences (K).
+D relates to L: Change (D) relates to the Evaluation (L).
+E relates to M: Request (E) relates to the Fulfillment (M).
+N consists of O, P, Q, R, S: Framework (N) consists of Loops (O), Functions (P), Playbooks (Q), Mappings (R), and Roles (S).
+R used by Q: Mappings (R) are used by Playbooks (Q).
+S used by Q: Roles (S) are used by Playbooks (Q).
+T contains U: Blocks (T) contains the Task (U).
+V selects W: User (V) selects the RoleSelected (W).
+W accesses X: RoleSelected (W) accesses the TroubleTickets (X).
+X views Y: TroubleTickets (X) views the View (Y).
+
 # Diagram
 ```mermaid
 graph LR
