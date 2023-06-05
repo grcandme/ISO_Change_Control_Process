@@ -31,6 +31,13 @@ Trouble tickets can also be associated with change implementation plans.
 Requests go through an evaluation process before moving to fulfillment.
 The system operates within a framework and utilizes components like loops, functions, playbooks, mappings, and roles.
 
+# Considerations in development 
+Active Directory: The Active Directory component represents a hierarchical structure of users and various roles associated with them. To optimize this structure, you can review the roles and their relationships to ensure they are organized efficiently and aligned with the system's requirements. Consider evaluating the need for each role and whether any redundant roles can be eliminated or consolidated.
+Trouble Ticket Mapping System: This component handles the management of trouble tickets, including creation, assignment, updates, and resolution. To optimize this system, you can focus on improving the ticket handling process. Review the workflow to identify any bottlenecks or areas for improvement. Streamline the ticket creation, assignment, and resolution processes to enhance efficiency and reduce response time.
+Primary Work Role ID Mapping: This component establishes relationships between work roles and the root node. To optimize this mapping, ensure that each work role is accurately associated with the relevant root node. Review the associations to eliminate any duplicates or incorrect mappings.
+Relationship Mapping: This component defines the relationships between different aspects of the system, such as ticket creation, assignment, tracking, resolution, data management, and communication. To optimize this mapping, validate the relationships to ensure they accurately reflect the system's functionality and requirements. Remove any unnecessary or incorrect relationships that may lead to confusion or inefficiency.
+State Diagram: The state diagram depicts the various states and transitions within the system, including user roles, trouble ticket handling, change control records, and other related processes. To optimize this diagram, review the states and transitions to ensure they accurately represent the system's behavior. Verify that all necessary states and transitions are included and remove any redundant or unnecessary elements.
+
 ```mermaid
 stateDiagram
     [*] --> User
