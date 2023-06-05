@@ -22,8 +22,6 @@ Perhaps you are considering how the [Partners](./Partner%20Ecosystem%20/roles%20
 
 [Failure Planning](./Relationship%20Diagrams/Roles/Failure%20Planning/failure%20planning%20diagram.md)
 
-
-
 # Compliant Folder Structure 
 [Folder Structure](./Organizational%20Folder%20Structure%20/organizational%20folder%20structure.md)
 Consider configuring SQL for your folder structure located 
@@ -91,3 +89,76 @@ stateDiagram
 # Roles 
 There's much to talk about with [Integrating Roles](./Roles/Integrating%20roles.md), like [Relationship Diagrams in Active Directory](./Relationship%20Diagrams/building%20effective%20relationship%20diagram.md)
 
+
+```mermaid
+graph TD
+
+subgraph Using Roles
+  Roles[Using Roles]
+  PlayLevelRoles[Using Roles at the Play Level]
+  IncludeR
+  oles[Including Roles: Dynamic Reuse]
+  ImportRoles[Importing Roles: Static Reuse]
+  RoleValidation[Role Argument Validation]
+
+  Roles --> PlayLevelRoles
+  Roles --> IncludeRoles
+  Roles --> ImportRoles
+  Roles --> RoleValidation
+end
+
+PlayLevelRoles --> RoleSyntax[Role Syntax in Play]
+PlayLevelRoles --> RoleVars[Role Variables]
+PlayLevelRoles --> RoleTags[Role Tags]
+PlayLevelRoles --> RoleConditionals[Role Conditionals]
+
+IncludeRoles --> IncludeSyntax[Include Syntax]
+IncludeRoles --> IncludeWithItems[Include with_items]
+IncludeRoles --> IncludeWithVars[Include with_vars]
+
+ImportRoles --> ImportSyntax[Import Syntax]
+ImportRoles --> ImportWithItems[Import with_items]
+ImportRoles --> ImportWithVars[Import with_vars]
+
+RoleValidation --> RoleValidationSyntax[Role Validation Syntax]
+RoleValidation --> RoleValidationTasks[Role Validation Tasks]
+
+```
+
+# Playboooks
+
+```mermaid
+graph LR
+
+subgraph Playbook
+  Play[Play]
+  Role[Role]
+  Block[Block]
+  Task[Task]
+
+  Play --> Role
+  Play --> Block
+  Play --> Task
+end
+
+```
+
+
+
+# Ticketing System
+[Ticketing System](./Ticketing%20System/ticket%20system.md)
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant System
+
+    User->>System: Log into the system
+    User->>System: Select role
+    User->>System: Navigate to Trouble Tickets
+    User->>System: Create incident ticket with description
+    System->>System: Assign unique identifier
+    System->>System: Save incident ticket
+    User->>System: View incident ticket and related information
+    User->>System: Add additional details or comments to the ticket
+```
