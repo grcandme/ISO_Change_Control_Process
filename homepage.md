@@ -24,6 +24,47 @@ As we get started, check out the  Business Continuity [link](./Business%20Contin
 
 This documentation is vast, I have focused on articulating the details in as verbose of method as possible. 
 
+# System Components
+
+# User:
+Attributes: name (string), role (WorkRole)
+Represents a user within the system and contains their name and assigned work role.
+# WorkRole:
+## Attributes: name (string)
+Represents a specific work role within the system.
+Problem, Change, Request, Incident:
+## Attributes: description (string)
+Represents different types of tickets or issues within the system.
+Associated with WorkRoles.
+# ChangeControlRecord:
+## Attributes: documentControl (DocumentControlInformation), implementationPlan (ChangeImplementationPlan), communication (CommunicationAndNotification), riskAssessment (RiskAssessmentAndControl), documentReferences (array of DocumentReferences)
+Represents a change control record that includes information related to document control, implementation plan, communication, risk assessment, and document references.
+DocumentControlInformation, ChangeImplementationPlan, CommunicationAndNotification, RiskAssessmentAndControl:
+## Attributes: content (string)
+Represents different aspects of the change control record, containing relevant content.
+# DocumentReferences:
+## Attributes: title (string), url (string)
+Represents references to external documents related to the change control record.
+TroubleTickets:
+## Attributes: problems (array of Problem), changes (array of Change), incidents (array of Incident), requests (array of Request), implementationPlan (ChangeImplementationPlan)
+Represents a collection of trouble tickets including problems, changes, incidents, and requests.
+Associated with ChangeImplementationPlan.
+Framework:
+## Attributes: loops (Loops), functions (Functions), playbooks (Playbooks), mappings (Mappings), roles (Roles)
+Represents a framework within the system that includes loops, functions, playbooks, mappings, and roles.
+Loops, Functions, Playbooks, Mappings, Roles:
+Attributes: description (string)
+Represents different components within the framework, each containing a description.
+Evaluation, Fulfillment:
+## Attributes: description (string)
+Represents components related to evaluation and fulfillment within the system.
+# Block:
+## Attributes: tasks (array of Task)
+Represents a block of tasks within the system.
+# Task:
+## Attributes: description (string)
+Represents an individual task within a block.
+
 # Active Directory
 If you are looking for resources related to [Active Directory](./Active%20Directory/active%20directory.md)
 If you are looking for [Active Directory Structure](./Active%20Directory/active%20directory%20structure.md)
@@ -81,7 +122,29 @@ Perhaps you are considering how the [Partners](./Partner%20Ecosystem%20/roles%20
 
 [Failure Planning](./Relationship%20Diagrams/Roles/Failure%20Planning/failure%20planning%20diagram.md)
 
-## Diagram
+# Systems for Business
+
+# Systems Analysis for Organizational Improvement:
+## Components: RootCause, Trigger, Event, Incident
+## Relationships: RootCause causes Event, Trigger triggers Event, Event leads to Incident
+
+# Increasing the Time Between Failures:
+## Components: AvoidAntipatterns, SpreadRisks, AdoptDevPractices
+## Relationships: AvoidAntipatterns improves Resilience, SpreadRisks improves Resilience, AdoptDevPractices improves Resilience
+
+# Trouble Tickets:
+## Components: Problem, Change, Incident, Request, Implementation, Validation, Investigation, Resolution, Evaluation, Fulfillment
+## Relationships: Problem initiates Change, Incident, and Request; Change requires Implementation and Validation; Incident requires Investigation and Resolution; Request requires Evaluation and Fulfillment
+
+# Framework:
+## Components: Loops, Functions, Playbooks, Mappings, Roles
+## Relationships: Loops utilize Functions, Loops utilize Playbooks, Functions define Mappings, Mappings define Playbooks, Playbooks define Roles, Roles define Playbooks
+
+# Reducing Time to Detect:
+## Components: Align, FreshData, EffectiveAlerts
+## Relationships: Align improves SLIs, FreshData improves SLIs, EffectiveAlerts improves SLIs
+
+# Site Reliability Diagram
 
 ```mermaid
 graph LR
