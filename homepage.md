@@ -196,3 +196,82 @@ sequenceDiagram
     User->>System: View incident ticket and related information
     User->>System: Add additional details or comments to the ticket
 ```
+
+## About the Ticketing System 
+### Systems Analysis for Organizational Improvement: 
+#### This component focuses on identifying the root causes and triggers of events, which subsequently lead to incidents. Understanding these causes helps in analyzing and improving organizational processes.
+### Increasing the Time Between Failures: 
+#### This subcomponent aims to enhance system resilience by avoiding anti-patterns, spreading risks, and adopting development practices that contribute to a longer time between failures.
+### Trouble Tickets: 
+#### This component involves the initiation of various tickets, including problem, incident, and request tickets. Problems can trigger changes, incidents require investigation and resolution, and requests necessitate evaluation and fulfillment.
+### Framework: 
+#### The framework component utilizes loops, functions, playbooks, mappings, and roles to define and manage ticketing processes effectively.
+### Reducing Time to Detect: 
+#### This subcomponent focuses on improving Service Level Indicators (SLIs) by aligning systems, utilizing fresh data, and implementing effective alert mechanisms.
+### Relationships and Interactions: 
+#### Problems are related to alignment, fresh data, and effective alerts. Resilience affects changes, incidents, requests, problems, alignment, fresh data, and effective alerts. Events and incidents are affected by system resilience.
+
+# Graphic Representation of the system with high level components. 
+See [Trouble Tickets](./Relationship%20Diagrams/Trouble%20Tickets/)
+
+```mermaid
+graph LR
+    subgraph "Systems Analysis for Organizational Improvement"
+        RootCause -->|Causes| Event
+        Trigger -->|Triggers| Event
+        Event -->|Leads to| Incident
+    end
+
+    RootCause -->|Example| RootCauseExample[Root Cause: Example]
+    Trigger -->|Example| TriggerExample[Trigger: Example]
+    Incident -->|Example| IncidentExample[Incident: Example]
+
+    subgraph "Increasing the Time Between Failures"
+        AvoidAntipatterns -->|Improves| Resilience
+        SpreadRisks -->|Improves| Resilience
+        AdoptDevPractices -->|Improves| Resilience
+    end
+    
+    subgraph Trouble Tickets
+        Problem -->|Initiates| Change
+        Problem -->|Initiates| Incident
+        Problem -->|Initiates| Request
+        Change -->|Requires| Implementation
+        Change -->|Requires| Validation
+        Incident -->|Requires| Investigation
+        Incident -->|Requires| Resolution
+        Request -->|Requires| Evaluation
+        Request -->|Requires| Fulfillment
+    end
+
+    subgraph Framework
+        Loops -->|Utilizes| Functions
+        Loops -->|Utilizes| Playbooks
+        Functions -->|Defines| Mappings
+        Mappings -->|Defines| Playbooks
+        Playbooks -->|Defines| Roles
+        Roles -->|Defines| Playbooks
+    end
+    
+    subgraph "Reducing Time to Detect"
+        Align -->|Improves| SLIs
+        FreshData -->|Improves| SLIs
+        EffectiveAlerts -->|Improves| SLIs
+    end
+    
+    Problem -->|Relates to| Align
+    Problem -->|Relates to| FreshData
+    Problem -->|Relates to| EffectiveAlerts
+    
+    Resilience -->|Affects| Change
+    Resilience -->|Affects| Incident
+    Resilience -->|Affects| Request
+    Resilience -->|Affects| Problem
+    Resilience -->|Affects| Align
+    Resilience -->|Affects| FreshData
+    Resilience -->|Affects| EffectiveAlerts
+    
+    Event -->|Affected by| Resilience
+    Incident -->|Affected by| Resilience
+
+```
