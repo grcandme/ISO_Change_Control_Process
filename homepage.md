@@ -1,5 +1,827 @@
+# The step by step guide for this Framework
+Harnessing the Power of the Framework: A Step-by-Step Guide
+
+# Introduction:
+Implementing a comprehensive framework is essential for organizations aiming to streamline their processes and optimize productivity. In this article, we will guide you through the practical utilization of a framework, using a specific example. By leveraging the components and relationships within the framework, you can effectively manage trouble tickets, assign roles, and orchestrate tasks. Let's dive into the step-by-step process.
+
+# Step 1: Understanding the Framework:
+The framework consists of five key components: Loops, Functions, Playbooks, Mappings, and Roles. Loops and Functions work together to define the workflow, while Playbooks provide guidance on executing specific tasks. Mappings establish relationships between different components, and Roles define the responsibilities of individuals within the system.
+
+# Step 2: Defining Roles and Access:
+To begin, users (A) must select their specific work role (B). Each work role has a defined set of responsibilities, which allows users to access relevant features and perform specific tasks. For example, a user may select the "Analyst" role, granting them access to various functionalities.
+
+# Step 3: Trouble Ticket Management:
+The Trouble Tickets component (C) enables users to address problems, initiate changes, and submit requests. As a user identifies a problem, they create a trouble ticket, which triggers a ChangeControlRecord (F). This record captures essential information related to the problem, such as the DocumentControlInformation (G), ChangeImplementationPlan (H), CommunicationAndNotification (I), RiskAssessmentAndControl (J), and DocumentReferences (K).
+
+# Step 4: Task Execution:
+Tasks are organized within Blocks (T) and can be assigned to specific users based on their roles. For instance, an Analyst role can be assigned tasks related to keyword research, on-page optimization, off-page optimization, and link building.
+
+# Step 5: Playbooks for Guidance:
+Playbooks provide step-by-step instructions for executing specific tasks. In our example, the Playbook guides users through the process of conducting keyword research, optimizing meta tags, ensuring search engine-friendly URLs, improving content quality, and developing a link-building strategy.
+
+# Step 6: Task Completion and Progress Tracking:
+Users access the Trouble Tickets system (X) to view and interact with their assigned tasks. The View (Y) functionality allows users to create new tasks (Z), revert changes, edit existing tasks (AA), and monitor the progress of ongoing tasks. By utilizing this system, users can ensure that tasks are completed efficiently and progress is tracked effectively.
+
+# Step 7: Managing Change Control:
+Users responsible for ChangeControlRecords (F) create new records (AB), start them (AC), and mark them as completed (AD). Additionally, they create ChangeImplementationPlans (H) and finalize them (AF), ensuring smooth execution of changes.
+
+# Conclusion:
+Effectively utilizing a framework enhances organizational efficiency and productivity by providing a structured approach to task management, role assignment, and trouble ticket handling. By following the step-by-step guide outlined above, organizations can leverage the power of a framework to streamline their operations, improve collaboration, and achieve their desired outcomes. Embrace the potential of frameworks and propel your organization towards greater success.
+
+# Considerations for use in your Environment
+Simplify the component relationships: The framework currently has multiple overlapping relationships between components, which can make it complex and harder to understand. Consider streamlining the relationships to make them more intuitive and straightforward.
+
+## Simple
+```mermaid
+graph LR
+    A(User)
+    B(WorkRole)
+    C(Problem)
+    D(Change)
+    E(Request)
+    F(ChangeControlRecord)
+    G(DocumentControlInformation)
+    H(ChangeImplementationPlan)
+    I(CommunicationAndNotification)
+    J(RiskAssessmentAndControl)
+    K(DocumentReferences)
+    L(Evaluation)
+    M(Fulfillment)
+    N(Framework)
+    O(Loops)
+    P(Functions)
+    Q(Playbooks)
+    R(Mappings)
+    S(Roles)
+    T(Blocks)
+    U(Task)
+    V(User)
+    W(RoleSelected)
+    X(TroubleTickets)
+    Y(View)
+
+    A --> B
+    B --> C
+    B --> D
+    B --> E
+    C --> F
+    D --> F
+    E --> F
+    F --> G
+    F --> H
+    F --> I
+    F --> J
+    F --> K
+    C --> F
+    D --> L
+    E --> M
+    N --> O
+    N --> P
+    N --> Q
+    N --> R
+    N --> S
+    R --> Q
+    S --> Q
+    T --> U
+    V --> W
+    W --> X
+    X --> Y
+```
+Clarify the purpose of each component: Some of the components, such as User, RoleSelected, and View, have vague or unclear purposes. Clearly define the role and purpose of each component to ensure their relevance within the framework.
+
+## Clear
+
+```
+
+    A(User)
+    B(WorkRole)
+    C(Problem)
+    D(Change)
+    E(Request)
+    F(ChangeControlRecord)
+    G(DocumentControlInformation)
+    H(ChangeImplementationPlan)
+    I(CommunicationAndNotification)
+    J(RiskAssessmentAndControl)
+    K(DocumentReferences)
+    L(Evaluation)
+    M(Fulfillment)
+    N(Framework)
+    O(Loops)
+    P(Functions)
+    Q(Playbooks)
+    R(Mappings)
+    S(Roles)
+    T(Blocks)
+    U(Task)
+    V(User)
+    W(RoleSelected)
+    X(TroubleTickets)
+    Y(View)
+
+    A(User) --> B(WorkRole)
+    B(WorkRole) --> C(Problem)
+    B(WorkRole) --> D(Change)
+    B(WorkRole) --> E(Request)
+    C(Problem) --> F(ChangeControlRecord)
+    D(Change) --> F(ChangeControlRecord)
+    E(Request) --> F(ChangeControlRecord)
+    F(ChangeControlRecord) --> G(DocumentControlInformation)
+    F(ChangeControlRecord) --> H(ChangeImplementationPlan)
+    F(ChangeControlRecord) --> I(CommunicationAndNotification)
+    F(ChangeControlRecord) --> J(RiskAssessmentAndControl)
+    F(ChangeControlRecord) --> K(DocumentReferences)
+    C(Problem) --> F(ChangeControlRecord)
+    D(Change) --> L(Evaluation)
+    E(Request) --> M(Fulfillment)
+    N(Framework) --> O(Loops)
+    N(Framework) --> P(Functions)
+    N(Framework) --> Q(Playbooks)
+    N(Framework) --> R(Mappings)
+    N(Framework) --> S(Roles)
+    R(Mappings) --> Q(Playbooks)
+    S(Roles) --> Q(Playbooks)
+    T(Blocks) --> U(Task)
+    V(User) --> W(RoleSelected)
+    W(RoleSelected) --> X(TroubleTickets)
+    X(TroubleTickets) --> Y(View)
+```
+Reorganize the components: Group related components together to create a more cohesive and logical structure. For example, place the components related to problem management (Problem, Change, Request, Incident) closer to each other to emphasize their interconnectedness.
+
+## Organize 
+
+```mermaid
+graph LR
+    A(User)
+    B(WorkRole)
+    C(Problem)
+    D(Change)
+    E(Request)
+    F(ChangeControlRecord)
+    G(DocumentControlInformation)
+    H(ChangeImplementationPlan)
+    I(CommunicationAndNotification)
+    J(RiskAssessmentAndControl)
+    K(DocumentReferences)
+    L(Evaluation)
+    M(Fulfillment)
+    N(Framework)
+    O(Loops)
+    P(Functions)
+    Q(Playbooks)
+    R(Mappings)
+    S(Roles)
+    T(Blocks)
+    U(Task)
+    V(User)
+    W(RoleSelected)
+    X(TroubleTickets)
+    Y(View)
+
+    A(User) --> B(WorkRole)
+    B(WorkRole) --> C(Problem)
+    B(WorkRole) --> D(Change)
+    B(WorkRole) --> E(Request)
+    C(Problem) --> F(ChangeControlRecord)
+    D(Change) --> F(ChangeControlRecord)
+    E(Request) --> F(ChangeControlRecord)
+    F(ChangeControlRecord) --> G(DocumentControlInformation)
+    F(ChangeControlRecord) --> H(ChangeImplementationPlan)
+    F(ChangeControlRecord) --> I(CommunicationAndNotification)
+    F(ChangeControlRecord) --> J(RiskAssessmentAndControl)
+    F(ChangeControlRecord) --> K(DocumentReferences)
+    C(Problem) --> F(ChangeControlRecord)
+    D(Change) --> L(Evaluation)
+    E(Request) --> M(Fulfillment)
+    N(Framework) --> O(Loops)
+    N(Framework) --> P(Functions)
+    N(Framework) --> R(Mappings)
+    N(Framework) --> S(Roles)
+    Q(Playbooks) --> R(Mappings)
+    Q(Playbooks) --> S(Roles)
+    T(Blocks) --> U(Task)
+    V(User) --> W(RoleSelected)
+    W(RoleSelected) --> X(TroubleTickets)
+    X(TroubleTickets) --> Y(View)
+```
+Reduce unnecessary complexity: If certain components or relationships are not essential to the core functionality of the framework, consider removing or simplifying them. This will help streamline the framework and make it more focused.
+
+```
+
+    A(User)
+    B(WorkRole)
+    C(Problem)
+    D(Change)
+    E(Request)
+    F(ChangeControlRecord)
+    G(DocumentControlInformation)
+    H(ChangeImplementationPlan)
+    I(CommunicationAndNotification)
+    J(RiskAssessmentAndControl)
+    K(DocumentReferences)
+    L(Evaluation)
+    M(Fulfillment)
+    N(Framework)
+    O(Loops)
+    P(Functions)
+    Q(Playbooks)
+    R(Mappings)
+    S(Roles)
+    T(Blocks)
+    U(Task)
+    V(User)
+    W(RoleSelected)
+    X(TroubleTickets)
+    Y(View)
+
+    A(User) --> B(WorkRole)
+    B(WorkRole) --> C(Problem)
+    B(WorkRole) --> D(Change)
+    B(WorkRole) --> E(Request)
+    C(Problem) --> F(ChangeControlRecord)
+    D(Change) --> F(ChangeControlRecord)
+    E(Request) --> F(ChangeControlRecord)
+    F(ChangeControlRecord) --> G(DocumentControlInformation)
+    F(ChangeControlRecord) --> H(ChangeImplementationPlan)
+    F(ChangeControlRecord) --> I(CommunicationAndNotification)
+    F(ChangeControlRecord) --> J(RiskAssessmentAndControl)
+    F(ChangeControlRecord) --> K(DocumentReferences)
+    D(Change) --> L(Evaluation)
+    E(Request) --> M(Fulfillment)
+    N(Framework) --> O(Loops)
+    N(Framework) --> P(Functions)
+    N(Framework) --> Q(Playbooks)
+    N(Framework) --> R(Mappings)
+    N(Framework) --> S(Roles)
+    Q(Playbooks) --> R(Mappings)
+    Q(Playbooks) --> S(Roles)
+    T(Blocks) --> U(Task)
+    V(User) --> W(RoleSelected)
+    W(RoleSelected) --> X(TroubleTickets)
+    X(TroubleTickets) --> Y(View)
+```
+Consider naming conventions: Ensure that the component names accurately reflect their purpose and role in the framework. Clear and consistent naming conventions can improve understanding and maintainability.
+
+```mermaid
+graph LR
+    A(User)
+    B(WorkRole)
+    C(Problem)
+    D(Change)
+    E(Request)
+    F(ControlRecord)
+    G(DocumentControlInformation)
+    H(ChangeImplementationPlan)
+    I(CommunicationAndNotification)
+    J(RiskAssessmentAndControl)
+    K(DocumentReferences)
+    L(Evaluation)
+    M(Fulfillment)
+    N(Framework)
+    O(Loops)
+    P(Functions)
+    Q(Playbooks)
+    R(Mappings)
+    S(Roles)
+    T(Blocks)
+    U(Task)
+    V(User)
+    W(RoleSelected)
+    X(TroubleTickets)
+    Y(View)
+
+    A(User) --> B(WorkRole)
+    B(WorkRole) --> C(Problem)
+    B(WorkRole) --> D(Change)
+    B(WorkRole) --> E(Request)
+    C(Problem) --> F(ControlRecord)
+    D(Change) --> F(ControlRecord)
+    E(Request) --> F(ControlRecord)
+    F(ControlRecord) --> G(DocumentControlInformation)
+    F(ControlRecord) --> H(ChangeImplementationPlan)
+    F(ControlRecord) --> I(CommunicationAndNotification)
+    F(ControlRecord) --> J(RiskAssessmentAndControl)
+    F(ControlRecord) --> K(DocumentReferences)
+    D(Change) --> L(Evaluation)
+    E(Request) --> M(Fulfillment)
+    N(Framework) --> O(Loops)
+    N(Framework) --> P(Functions)
+    N(Framework) --> Q(Playbooks)
+    N(Framework) --> R(Mappings)
+    N(Framework) --> S(Roles)
+    Q(Playbooks) --> R(Mappings)
+    Q(Playbooks) --> S(Roles)
+    T(Blocks) --> U(Task)
+    V(User) --> W(RoleSelected)
+    W(RoleSelected) --> X(TroubleTickets)
+    X(TroubleTickets) --> Y(View)
+```
+
+
+Provide additional context or documentation: Depending on the purpose and audience of the framework, it may be helpful to provide supplementary documentation or context to explain the overall goal, usage guidelines, and any specific conventions or best practices associated with the framework. This repository should serve with enough components for you to be successful on your journey. 
+
+```mermaid
+graph TB
+    A(Start)
+    B(User) --> C(WorkRole)
+    C --> D(Problem)
+    C --> E(Change)
+    C --> F(Request)
+    D --> G(ControlRecord)
+    E --> G(ControlRecord)
+    F --> G(ControlRecord)
+    G --> H(DocumentControlInformation)
+    G --> I(ChangeImplementationPlan)
+    G --> J(CommunicationAndNotification)
+    G --> K(RiskAssessmentAndControl)
+    G --> L(DocumentReferences)
+    E --> M(Fulfillment)
+    E --> N(Problem Resolution)
+    M --> N
+    N --> O(End)
+
+    style A fill:#99ccff, stroke:#333, stroke-width:2px
+    style O fill:#99ccff, stroke:#333, stroke-width:2px
+```
+
+## About the System
+The journey starts at the "Start" node.
+The user (represented by User) assumes a specific work role (WorkRole).
+The user encounters a problem (Problem) and initiates a change (Change) and a change request (Request).
+The change and request are associated with a control record (ControlRecord) that includes document control information, change implementation plan, communication and notification, risk assessment and control, and document references.
+The change and request are evaluated and fulfilled.
+The problem is resolved, and the journey ends at the "End" node.
+
+# System States 
+
+```mermaid
+stateDiagram
+    [*] --> Start
+    Start --> User
+    User --> WorkRole
+    WorkRole --> Problem
+    WorkRole --> Change
+    WorkRole --> Request
+    Change --> ControlRecord
+    Request --> ControlRecord
+    Problem --> ControlRecord
+    ControlRecord --> DocumentControlInformation
+    ControlRecord --> ChangeImplementationPlan
+    ControlRecord --> CommunicationAndNotification
+    ControlRecord --> RiskAssessmentAndControl
+    ControlRecord --> DocumentReferences
+    Change --> Evaluation
+    Request --> Fulfillment
+    Fulfillment --> ProblemResolution
+    Evaluation --> ProblemResolution
+    ProblemResolution --> [*]
+```
+## About States
+The initial state is "Start."
+The user progresses to the "User" state and assumes a specific work role in the "WorkRole" state.
+The user can encounter a "Problem" state and initiate a "Change" state and a "Request" state.
+Both the "Change" and "Request" states transition to the "ControlRecord" state, which includes sub-states for document control information, change implementation plan, communication and notification, risk assessment and control, and document references.
+The "Change" state transitions to an "Evaluation" state, while the "Request" state transitions to a "Fulfillment" state.
+Both the "Evaluation" and "Fulfillment" states transition to a "ProblemResolution" state.
+The "ProblemResolution" state transitions back to the initial state, representing the end of the process.
+
+# System 
+
+```sql
+User ----< WorkRole
+WorkRole ----< Problem
+WorkRole ----< Change
+WorkRole ----< Request
+Problem ----< ControlRecord
+Change ----< ControlRecord
+Request ----< ControlRecord
+ControlRecord ----< DocumentControlInformation
+ControlRecord ----< ChangeImplementationPlan
+ControlRecord ----< CommunicationAndNotification
+ControlRecord ----< RiskAssessmentAndControl
+ControlRecord ----< DocumentReferences
+Change ----< Evaluation
+Request ----< Fulfillment
+Fulfillment ----< ProblemResolution
+Evaluation ----< ProblemResolution
+```
+## About the system
+Each entity is represented by a box.
+The arrow symbol "--<" indicates a one-to-many relationship, meaning that one entity can be related to multiple instances of another entity.
+For example, a User can have multiple WorkRoles, and each WorkRole can be associated with multiple Problems, Changes, and Requests.
+Similarly, a Problem, Change, or Request can be associated with multiple ControlRecords, and each ControlRecord can have multiple DocumentControlInformation, ChangeImplementationPlan, CommunicationAndNotification, RiskAssessmentAndControl, and DocumentReferences.
+The Change entity is related to Evaluation, and the Request entity is related to Fulfillment, both indicating a one-to-many relationship.
+Finally, Fulfillment and Evaluation entities are both related to ProblemResolution, suggesting a one-to-many relationship.
+
+# System Class
+```sql
+             +--------+
+             |  User  |
+             +--------+
+                |
+                |
+             +--------+
+             |WorkRole|
+             +--------+
+                |
+       +--------+-------+
+       |                |
+  +---------+      +-----------+
+  | Problem |      |   Change  |
+  +---------+      +-----------+
+       |                |
+       |                |
+  +---------+      +-----------+
+  | Request |      | ControlRecord |
+  +---------+      +-----------+
+                         |
+                         |
+      +-------------------------------+
+      |                               |
++----------------------+   +------------------------+
+| DocumentControlInformation |   | ChangeImplementationPlan |
++----------------------+   +------------------------+
+      |                               |
+      |                               |
++------------------------+   +------------------------+
+| CommunicationAndNotification |   | RiskAssessmentAndControl |
++------------------------+   +------------------------+
+      |
+      |
++------------------+
+| DocumentReferences |
++------------------+
+      |
+      |
+  +---------+
+  | Evaluation |
+  +---------+
+      |
+      |
+  +---------------+
+  | Fulfillment |
+  +---------------+
+      |
+      |
++-------------------+
+| ProblemResolution |
++-------------------+
+```
+
+## About The Classes
+Each entity is represented as a class.
+Associations between classes are represented by lines connecting them.
+Multiplicity is indicated near the associations to show the cardinality of the relationship.
+For example, the User class has a one-to-many relationship with the WorkRole class, and the WorkRole class has a one-to-many relationship with the Problem, Change, and Request classes.
+The ControlRecord class is associated with the DocumentControlInformation, ChangeImplementationPlan, CommunicationAndNotification, RiskAssessmentAndControl, and DocumentReferences classes, indicating a composition relationship.
+The Change class has a one-to-many relationship with the Evaluation class, and the Request class has a one-to-many relationship with the Fulfillment class.
+Finally, both the Fulfillment and Evaluation classes are associated with the ProblemResolution class, suggesting a composition relationship.
+
+# Atributes
+```mermaid
+classDiagram
+  class User {
+    +name: string
+    +email: string
+    +username: string
+  }
+
+  class WorkRole {
+    +title: string
+    +description: string
+  }
+
+  class Problem {
+    +title: string
+    +description: string
+  }
+
+  class Change {
+    +title: string
+    +description: string
+  }
+
+  class Request {
+    +title: string
+    +description: string
+  }
+
+  class ControlRecord {
+    +id: string
+    +status: string
+    +timestamp: DateTime
+  }
+
+  class DocumentControlInformation {
+    +id: string
+    +content: string
+  }
+
+  class ChangeImplementationPlan {
+    +id: string
+    +steps: string[]
+  }
+
+  class CommunicationAndNotification {
+    +id: string
+    +message: string
+  }
+
+  class RiskAssessmentAndControl {
+    +id: string
+    +riskLevel: string
+  }
+
+  class DocumentReferences {
+    +id: string
+    +title: string
+    +url: string
+  }
+
+  class Evaluation {
+    +id: string
+    +criteria: string[]
+    +results: string[]
+  }
+
+  class Fulfillment {
+    +id: string
+    +status: string
+  }
+
+  class ProblemResolution {
+    +id: string
+    +solution: string
+  }
+
+  User -- WorkRole
+  WorkRole -- Problem
+  WorkRole -- Change
+  WorkRole -- Request
+  Problem -- ControlRecord
+  Change -- ControlRecord
+  Request -- ControlRecord
+  ControlRecord -- DocumentControlInformation
+  ControlRecord -- ChangeImplementationPlan
+  ControlRecord -- CommunicationAndNotification
+  ControlRecord -- RiskAssessmentAndControl
+  ControlRecord -- DocumentReferences
+  Change -- Evaluation
+  Request -- Fulfillment
+  Fulfillment -- ProblemResolution
+  Evaluation -- ProblemResolution
+```
+# Diagram
+```mermaid
+graph LR
+    A(User)
+    B(WorkRole)
+    C(Problem)
+    D(Change)
+    E(Request)
+    F(ChangeControlRecord)
+    G(DocumentControlInformation)
+    H(ChangeImplementationPlan)
+    I(CommunicationAndNotification)
+    J(RiskAssessmentAndControl)
+    K(DocumentReferences)
+    L(Evaluation)
+    M(Fulfillment)
+    N(Framework)
+    O(Loops)
+    P(Functions)
+    Q(Playbooks)
+    R(Mappings)
+    S(Roles)
+    T(Blocks)
+    U(Task)
+    V(User)
+    W(RoleSelected)
+    X(TroubleTickets)
+    Y(View)
+
+    A -->|performs| B
+    B -->|has| C
+    B -->|initiates| D
+    B -->|submits| E
+    C -->|triggers| F
+    D -->|relates to| F
+    E -->|triggers| F
+    F -->|has| G
+    F -->|has| H
+    F -->|notifies| I
+    F -->|assesses| J
+    F -->|refers to| K
+    C -->|triggers| F
+    D -->|relates to| L
+    E -->|relates to| M
+    N -->|consists of| O
+    N -->|consists of| P
+    N -->|consists of| Q
+    N -->|consists of| R
+    N -->|consists of| S
+    R -->|used by| Q
+    S -->|used by| Q
+    T -->|contains| U
+    V -->|selects| W
+    W -->|accesses| X
+    X -->|views| Y
+```
+## System Requirements
+```mermaid
+classDiagram
+  class User {
+    +name: string
+    +email: string
+    +username: string
+  }
+
+  class WorkRole {
+    +title: string
+    +description: string
+  }
+
+  class Problem {
+    +title: string
+    +description: string
+  }
+
+  class Change {
+    +title: string
+    +description: string
+  }
+
+  class Request {
+    +title: string
+    +description: string
+  }
+
+  class ControlRecord {
+    +id: string
+    +status: string
+    +timestamp: DateTime
+  }
+
+  class DocumentControlInformation {
+    +id: string
+    +content: string
+  }
+
+  class ChangeImplementationPlan {
+    +id: string
+    +steps: string[]
+  }
+
+  class CommunicationAndNotification {
+    +id: string
+    +message: string
+  }
+
+  class RiskAssessmentAndControl {
+    +id: string
+    +riskLevel: string
+  }
+
+  class DocumentReferences {
+    +id: string
+    +title: string
+    +url: string
+  }
+
+  class Evaluation {
+    +id: string
+    +criteria: string[]
+    +results: string[]
+  }
+
+  class Fulfillment {
+    +id: string
+    +status: string
+  }
+
+  class ProblemResolution {
+    +id: string
+    +solution: string
+  }
+
+  class Requirement {
+    +id: string
+    +description: string
+  }
+
+  User -- WorkRole
+  WorkRole -- Problem
+  WorkRole -- Change
+  WorkRole -- Request
+  Problem -- ControlRecord
+  Change -- ControlRecord
+  Request -- ControlRecord
+  ControlRecord -- DocumentControlInformation
+  ControlRecord -- ChangeImplementationPlan
+  ControlRecord -- CommunicationAndNotification
+  ControlRecord -- RiskAssessmentAndControl
+  ControlRecord -- DocumentReferences
+  Change -- Evaluation
+  Request -- Fulfillment
+  Fulfillment -- ProblemResolution
+  Evaluation -- ProblemResolution
+  Requirement -- WorkRole
+  Requirement -- Problem
+  Requirement -- Change
+  Requirement -- Request
+  Requirement -- ControlRecord
+  Requirement -- DocumentControlInformation
+  Requirement -- ChangeImplementationPlan
+  Requirement -- CommunicationAndNotification
+  Requirement -- RiskAssessmentAndControl
+  Requirement -- DocumentReferences
+  Requirement -- Evaluation
+  Requirement -- Fulfillment
+  Requirement -- ProblemResolution
+```
+
+# User Journey
+
+```mermaid
+graph LR
+  A(User)
+  B(WorkRole)
+  C(Problem)
+  D(Change)
+  E(Request)
+  F(ControlRecord)
+  G(DocumentControlInformation)
+  H(ChangeImplementationPlan)
+  I(CommunicationAndNotification)
+  J(RiskAssessmentAndControl)
+  K(DocumentReferences)
+  L(Evaluation)
+  M(Fulfillment)
+  N(ProblemResolution)
+
+  A(User) -->|Selects| B(WorkRole)
+  B(WorkRole) -->|Identifies| C(Problem)
+  B(WorkRole) -->|Initiates| D(Change)
+  B(WorkRole) -->|Submits| E(Request)
+  C(Problem) -->|Creates| F(ControlRecord)
+  D(Change) -->|Creates| F(ControlRecord)
+  E(Request) -->|Creates| F(ControlRecord)
+  F(ControlRecord) -->|Updates| G(DocumentControlInformation)
+  F(ControlRecord) -->|Creates| H(ChangeImplementationPlan)
+  F(ControlRecord) -->|Sends| I(CommunicationAndNotification)
+  F(ControlRecord) -->|Performs| J(RiskAssessmentAndControl)
+  F(ControlRecord) -->|Adds| K(DocumentReferences)
+  D(Change) -->|Completes| L(Evaluation)
+  E(Request) -->|Initiates| M(Fulfillment)
+  M(Fulfillment) -->|Resolves| C(Problem)
+  L(Evaluation) -->|Resolves| C(Problem)
+  C(Problem) -->|Closes| N(ProblemResolution)
+  D(Change) -->|Closes| N(ProblemResolution)
+  E(Request) -->|Closes| N(ProblemResolution)
+```
+
+## Journey
+
+```rust
+sequenceDiagram
+  participant User
+  participant WorkRole
+  participant Problem
+  participant ControlRecord
+  participant CommunicationAndNotification
+  participant Fulfillment
+  participant ProblemResolution
+
+  User->WorkRole: Submit ticket
+  WorkRole->Problem: Create problem
+  Problem->ControlRecord: Create control record
+  ControlRecord->CommunicationAndNotification: Notify stakeholders
+  CommunicationAndNotification->Fulfillment: Assign ticket
+  Fulfillment->ProblemResolution: Resolve problem
+  Fulfillment-->User: Notify user of resolution
+```
+
+```mermaid
+sequenceDiagram
+  participant User
+  participant WorkRole
+  participant Problem
+  participant ControlRecord
+  participant CommunicationAndNotification
+  participant Fulfillment
+  participant ProblemResolution
+
+  User->WorkRole: Submit ticket
+  WorkRole->Problem: Create problem
+  Problem->ControlRecord: Create control record
+  ControlRecord->CommunicationAndNotification: Notify stakeholders
+  CommunicationAndNotification->Fulfillment: Assign ticket
+  Fulfillment->ProblemResolution: Resolve problem
+  Fulfillment-->User: Notify user of resolution
+```
+
 # Homepage 
-A simplified homepage for the documentation here 
+
 
 Before you get started [read](./About%20and%20README/README.md)
 and check out the [license](./About%20and%20README/LICENSE)
