@@ -38,6 +38,38 @@ Primary Work Role ID Mapping: This component establishes relationships between w
 Relationship Mapping: This component defines the relationships between different aspects of the system, such as ticket creation, assignment, tracking, resolution, data management, and communication. To optimize this mapping, validate the relationships to ensure they accurately reflect the system's functionality and requirements. Remove any unnecessary or incorrect relationships that may lead to confusion or inefficiency.
 State Diagram: The state diagram depicts the various states and transitions within the system, including user roles, trouble ticket handling, change control records, and other related processes. To optimize this diagram, review the states and transitions to ensure they accurately represent the system's behavior. Verify that all necessary states and transitions are included and remove any redundant or unnecessary elements.
 
+# What occuring in the flow 
+## User:
+The workflow starts with the "User" state, representing a user interacting with the system.
+From the initial state, the user proceeds to the "RoleSelected" state, indicating that they have selected a specific role.
+## WorkRole:
+The user's selected role is then associated with the "WorkRole" state, indicating the user's current work role.
+The "WorkRole" state is connected to several other states, including "Problem," "Change," "Request," and "Incident," representing different aspects of the user's work responsibilities.
+## TroubleTickets:
+The "WorkRole" state is connected to the "TroubleTickets" state, which represents the user's interaction with trouble tickets.
+Within the "TroubleTickets" state, there are sub-states: "View," "Create," and "Edit."
+Users can view existing trouble tickets, create new ones, and edit existing ones.
+Problem, Change, Request, Incident:
+These states are directly connected to the "WorkRole" state, indicating that the user can work on various tasks related to problems, changes, requests, and incidents within their assigned role.
+These states are also connected to the "ChangeControlRecord" state.
+## ChangeControlRecord:
+The "ChangeControlRecord" state represents the management and control of changes and is connected to different aspects of change control, including:
+"DocumentControlInformation": Managing documents related to the change.
+"ChangeImplementationPlan": Developing and finalizing the change implementation plan.
+"CommunicationAndNotification": Managing communication and notifications related to the change.
+"RiskAssessmentAndControl": Assessing and controlling risks associated with the change.
+"DocumentReferences": Managing references and documentation related to the change.
+## ChangeImplementationPlan:
+The "ChangeImplementationPlan" state represents the process of creating and finalizing the change implementation plan.
+It consists of two sub-states: "Draft" and "Finalized."
+Changes progress from the draft stage to being finalized.
+## Framework, Mappings, Roles:
+These states represent various components of the overall system framework.
+"Framework" is connected to "Loops," "Functions," "Playbooks," "Mappings," and "Roles," indicating their inclusion in the system's framework.
+"Mappings" and "Roles" are connected to "Playbooks," indicating that they play a role in defining and guiding the execution of playbooks.
+## Blocks:
+The "Blocks" state represents tasks or actions within the workflow.
+
 ```mermaid
 stateDiagram
     [*] --> User
