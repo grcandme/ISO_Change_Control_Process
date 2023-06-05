@@ -212,7 +212,7 @@ sequenceDiagram
     User->>System: Add additional details or comments to the ticket
 ```
 
-## About the Ticketing System 
+# About the Ticketing System 
 ### Systems Analysis for Organizational Improvement: 
 #### This component focuses on identifying the root causes and triggers of events, which subsequently lead to incidents. Understanding these causes helps in analyzing and improving organizational processes.
 ### Increasing the Time Between Failures: 
