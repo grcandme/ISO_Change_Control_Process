@@ -9,12 +9,14 @@
 ## A. Recap of action items from the previous meeting 
 ## B. Update on the progress of each action item 
 ## C. Any issues or challenges encountered
+### D. Organizing your thoughts in a way that works 
 
 # III. Project Updates 
 ## A. Overview of current projects 
 ## B. Milestones achieved and upcoming deliverables 
 ## C. Updates on project timelines and dependencies 
 ## D. Discussion on any blockers or risks
+
 
 
 # IV. Technical Discussions
