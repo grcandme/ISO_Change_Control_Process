@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.4"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"root","depth":0,"content":"","children":[{"type":"heading","depth":1,"payload":{"lines":[2,3]},"content":"Disaster Recovery Plan Goals:","children":[{"type":"heading","depth":2,"payload":{"lines":[4,5]},"content":"Minimize interruptions to normal operations."},{"type":"heading","depth":2,"payload":{"lines":[5,6]},"content":"Limit disruption and damage."},{"type":"heading","depth":2,"payload":{"lines":[6,7]},"content":"Minimize economic impact."},{"type":"heading","depth":2,"payload":{"lines":[7,8]},"content":"Establish alternative means of operation in advance."},{"type":"heading","depth":2,"payload":{"lines":[8,9]},"content":"Train personnel in emergency procedures."},{"type":"heading","depth":2,"payload":{"lines":[9,10]},"content":"Provide for smooth and rapid restoration of service."}]},{"type":"heading","depth":1,"payload":{"lines":[11,12]},"content":"Personnel Information:","children":[{"type":"heading","depth":2,"payload":{"lines":[13,14]},"content":"Name"},{"type":"heading","depth":2,"payload":{"lines":[14,15]},"content":"Position"},{"type":"heading","depth":2,"payload":{"lines":[15,16]},"content":"Address"},{"type":"heading","depth":2,"payload":{"lines":[16,17]},"content":"Telephone"}]},{"type":"heading","depth":1,"payload":{"lines":[18,19]},"content":"Application Profile:","children":[{"type":"heading","depth":2,"payload":{"lines":[20,21]},"content":"Application name","children":[{"type":"heading","depth":3,"payload":{"lines":[21,22]},"content":"Critical (Yes/No)"},{"type":"heading","depth":3,"payload":{"lines":[22,23]},"content":"Fixed asset (Yes/No)"},{"type":"heading","depth":3,"payload":{"lines":[23,24]},"content":"Manufacturer","children":[{"type":"heading","depth":4,"payload":{"lines":[24,25]},"content":"Comments"}]},{"type":"heading","depth":3,"payload":{"lines":[25,26]},"content":"Run schedule","children":[{"type":"heading","depth":4,"payload":{"lines":[26,27]},"content":"(daily)"},{"type":"heading","depth":4,"payload":{"lines":[27,28]},"content":"(weekly)"},{"type":"heading","depth":4,"payload":{"lines":[28,29]},"content":"(monthly)"}]}]}]},{"type":"heading","depth":1,"payload":{"lines":[30,31]},"content":"Inventory Profile:","children":[{"type":"heading","depth":2,"payload":{"lines":[32,33]},"content":"List","children":[{"type":"heading","depth":3,"payload":{"lines":[33,34]},"content":"processing units"},{"type":"heading","depth":3,"payload":{"lines":[34,35]},"content":"printers"},{"type":"heading","depth":3,"payload":{"lines":[35,36]},"content":"disk units"},{"type":"heading","depth":3,"payload":{"lines":[36,37]},"content":"optical devices,"},{"type":"heading","depth":3,"payload":{"lines":[37,38]},"content":"controllers"}]}]},{"type":"heading","depth":1,"payload":{"lines":[39,40]},"content":"Information Services Backup Procedures:","children":[{"type":"heading","depth":2,"payload":{"lines":[41,42]},"content":"Daily journals and changed objects are saved at specific times."},{"type":"heading","depth":2,"payload":{"lines":[42,43]},"content":"Complete system save is done at regular intervals.","children":[{"type":"heading","depth":3,"payload":{"lines":[43,44]},"content":"Intervals","children":[{"type":"heading","depth":4,"payload":{"lines":[44,45]},"content":"Daily"},{"type":"heading","depth":4,"payload":{"lines":[45,46]},"content":"Weekly"},{"type":"heading","depth":4,"payload":{"lines":[46,47]},"content":"Monthly"}]},{"type":"heading","depth":3,"payload":{"lines":[47,48]},"content":"Save media is stored off-site."}]}]},{"type":"heading","depth":1,"payload":{"lines":[49,50]},"content":"Disaster Recovery Procedures:"},{"type":"heading","depth":1,"payload":{"lines":[51,52]},"content":"Plan initiation steps.","children":[{"type":"heading","depth":2,"payload":{"lines":[52,53]},"content":"Follow-up checklist."},{"type":"heading","depth":2,"payload":{"lines":[53,54]},"content":"Contact details for disaster recovery services."},{"type":"heading","depth":2,"payload":{"lines":[54,55]},"content":"Equipment delivery site address and contacts."},{"type":"heading","depth":2,"payload":{"lines":[55,56]},"content":"Power and telephone service supplier contacts."},{"type":"heading","depth":2,"payload":{"lines":[56,57]},"content":"Task list for each team involved."},{"type":"heading","depth":2,"payload":{"lines":[57,58]},"content":"Transportation, living arrangements, and supplies planning."},{"type":"heading","depth":2,"payload":{"lines":[58,59]},"content":"Vendor and insurance company notifications."}]},{"type":"heading","depth":1,"payload":{"lines":[60,61]},"content":"Recovery Plan for Mobile Site:","children":[{"type":"heading","depth":2,"payload":{"lines":[62,63]},"content":"Notify appropriate parties of the disaster and select the mobile site plan."},{"type":"heading","depth":2,"payload":{"lines":[63,64]},"content":"Prepare backup equipment and notify necessary service providers."},{"type":"heading","depth":2,"payload":{"lines":[64,65]},"content":"Set up power and communications at the mobile site."},{"type":"heading","depth":2,"payload":{"lines":[65,66]},"content":"Load system from backups and resume operations."}]},{"type":"heading","depth":1,"payload":{"lines":[67,68]},"content":"Recovery Plan for Hot Site:","children":[{"type":"heading","depth":2,"payload":{"lines":[69,70]},"content":"Establish an alternate site with a backup system for temporary use during recovery."}]},{"type":"heading","depth":1,"payload":{"lines":[71,72]},"content":"Restoring the Entire System:","children":[{"type":"heading","depth":2,"payload":{"lines":[73,74]},"content":"Instructions for restoring the entire system."}]},{"type":"heading","depth":1,"payload":{"lines":[75,76]},"content":"Rebuilding Process:","children":[{"type":"heading","depth":2,"payload":{"lines":[77,78]},"content":"Assessment of damage and reconstruction of a new data center."},{"type":"heading","depth":2,"payload":{"lines":[79,80]},"content":"Testing the Disaster Recovery Plan:"},{"type":"heading","depth":2,"payload":{"lines":[81,82]},"content":"Importance of regularly testing and evaluating the plan."},{"type":"heading","depth":2,"payload":{"lines":[83,84]},"content":"Disaster Site Rebuilding:","children":[{"type":"heading","depth":3,"payload":{"lines":[85,86]},"content":"Guidelines for rebuilding the disaster site."}]},{"type":"heading","depth":2,"payload":{"lines":[87,88]},"content":"Record of Plan Changes:"},{"type":"heading","depth":2,"payload":{"lines":[89,90]},"content":"Keeping the plan up to date and documenting changes to configuration, applications, and backup schedules."}]}],"payload":{}},{})</script>
+</body>
+</html>

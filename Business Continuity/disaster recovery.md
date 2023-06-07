@@ -72,7 +72,8 @@
 # Restoring the Entire System:
 
 ## Instructions for restoring the entire system.
-Rebuilding Process:
+
+# Rebuilding Process:
 
 ## Assessment of damage and reconstruction of a new data center.
 
@@ -80,10 +81,11 @@ Rebuilding Process:
 
 ## Importance of regularly testing and evaluating the plan.
 
-# Disaster Site Rebuilding:
+## Disaster Site Rebuilding:
 
-## Guidelines for rebuilding the disaster site.
+### Guidelines for rebuilding the disaster site.
 
-# Record of Plan Changes:
+## Record of Plan Changes:
 
 ## Keeping the plan up to date and documenting changes to configuration, applications, and backup schedules.
+
