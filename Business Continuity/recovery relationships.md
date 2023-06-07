@@ -28,3 +28,4 @@ graph LR
   L
   M
 ```
+[Build mermaid Diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams#creating-mermaid-diagrams)
