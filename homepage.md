@@ -120,6 +120,74 @@ journey
 
 ```
 
+# Components and playbooks
+```mermaid
+graph LR
+
+A(User)
+B(WorkRole)
+C(Problem)
+D(Change)
+E(Request)
+F(ChangeControlRecord)
+G(DocumentControlInformation)
+H(ChangeImplementationPlan)
+I(CommunicationAndNotification)
+J(RiskAssessmentAndControl)
+K(DocumentReferences)
+L(Evaluation)
+M(Fulfillment)
+N(Framework)
+O(Loops)
+P(Functions)
+Q(Playbooks)
+R(Mappings)
+S(Roles)
+T(Blocks)
+U(Task)
+V(User)
+W(RoleSelected)
+X(TroubleTickets)
+Y(View)
+
+A --> B
+B --> C
+B --> D
+B --> E
+C --> F
+D --> F
+E --> F
+F --> G
+F --> H
+F --> I
+F --> J
+F --> K
+C --> F
+D --> L
+E --> M
+N --> O
+N --> P
+N --> Q
+N --> R
+N --> S
+R --> Q
+S --> Q
+T --> U
+V --> W
+W --> X
+X --> Y
+
+A[Protecting Businesses in the Digital Age]
+B[Information Security]
+C[Physical Security]
+D[Executive Security]
+E[Counter and Operational Intelligence]
+F[Threat Intelligence and Awareness]
+G[Cyber Career - Jumpstart]
+H[Workshops]
+I[Effective Solutions]
+J[Sensible Cyber Solutions]
+```
 
 
 
