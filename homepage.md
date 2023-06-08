@@ -1,5 +1,6 @@
 # I. Protecting Businesses in the Digital Age 
 ## A. Information Security 
+
 ## B. Physical Security
 ## C. Executive Security 
 ## D. Counter and Operational Intelligence 
