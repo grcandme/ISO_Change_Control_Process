@@ -1,3 +1,128 @@
+# I. Protecting Businesses in the Digital Age 
+## A. Information Security 
+## B. Physical Security
+## C. Executive Security 
+## D. Counter and Operational Intelligence 
+## E. Threat Intelligence and Awareness 
+## F. Cyber Career - Jumpstart 
+## G. Workshops
+
+# II. Sensible Cyber Solutions: Practical Approaches to Security 
+# A. Effective Solutions 
+# B. Contents of Sensible Cyber Solutions Package
+
+
+# Putting the Pieces together
+
+```mermaid
+graph LR
+
+A[Protecting Businesses in the Digital Age]
+A --> B[Information Security]
+A --> C[Physical Security]
+A --> D[Executive Security]
+A --> E[Counter and Operational Intelligence]
+A --> F[Threat Intelligence and Awareness]
+A --> G[Cyber Career - Jumpstart]
+A --> H[Workshops]
+
+B --> I[Effective Solutions]
+
+A --> J[Sensible Cyber Solutions]
+J --> I
+
+
+```
+
+
+# Relationship
+```mermaid
+stateDiagram-v2
+    [*] --> Protecting
+    Protecting --> Information
+    Protecting --> Physical
+    Protecting --> Executive
+    Protecting --> Counter
+    Protecting --> Threat
+    Protecting --> Career
+    Protecting --> Workshops
+    Information --> Effective
+    Protecting --> Sensible
+    Sensible --> Effective
+
+```
+
+# How does it work
+```mermaid
+journey
+    title User Journey: Protecting Businesses in the Digital Age
+
+    section Awareness
+    User->Information Security: Learns about the importance of information security
+    User->Physical Security: Understands the significance of physical security measures
+    User->Executive Security: Recognizes the need to protect executives and sensitive information
+    User->Counter and Operational Intelligence: Realizes the value of gathering intelligence
+    User->Threat Intelligence and Awareness: Educates themselves on cyber threats and attack vectors
+    User->Cyber Career - Jumpstart: Considers a career transition into cybersecurity
+
+    section Engagement
+    User->Workshops: Participates in interactive sessions to enhance knowledge and skills
+    User->Sensible Cyber Solutions: Discovers comprehensive services for cybersecurity
+
+    section Implementation
+    User->Information Security: Implements measures to protect data and systems
+    User->Physical Security: Enhances physical security measures for premises and assets
+    User->Executive Security: Implements safeguards for executives and sensitive information
+    User->Counter and Operational Intelligence: Establishes intelligence-gathering processes
+    User->Threat Intelligence and Awareness: Implements cybersecurity awareness programs
+    User->Sensible Cyber Solutions: Engages services for comprehensive protection
+
+    section Continuous Improvement
+    User->Sensible Cyber Solutions: Receives ongoing support and updates
+    User->Sensible Cyber Solutions: Enhances cybersecurity measures based on intelligence
+    User->User Satisfaction: Achieves improved security posture and peace of mind
+
+    section Feedback
+    User->Sensible Cyber Solutions: Provides feedback and shares success stories
+
+```
+# Your User Journey
+```mermaid
+journey
+    title User Journey: Protecting Businesses in the Digital Age
+
+    section Awareness
+    User --> Information Security: Learns about the importance of information security
+    User --> Physical Security: Understands the significance of physical security measures
+    User --> Executive Security: Recognizes the need to protect executives and sensitive information
+    User --> Counter and Operational Intelligence: Realizes the value of gathering intelligence
+    User --> Threat Intelligence and Awareness: Educates themselves on cyber threats and attack vectors
+    User --> Cyber Career - Jumpstart: Considers a career transition into cybersecurity
+
+    section Engagement
+    User --> Workshops: Participates in interactive sessions to enhance knowledge and skills
+    User --> Sensible Cyber Solutions: Discovers comprehensive services for cybersecurity
+
+    section Implementation
+    User --> Information Security: Implements measures to protect data and systems
+    User --> Physical Security: Enhances physical security measures for premises and assets
+    User --> Executive Security: Implements safeguards for executives and sensitive information
+    User --> Counter and Operational Intelligence: Establishes intelligence-gathering processes
+    User --> Threat Intelligence and Awareness: Implements cybersecurity awareness programs
+    User --> Sensible Cyber Solutions: Engages services for comprehensive protection
+
+    section Continuous Improvement
+    User --> Sensible Cyber Solutions: Receives ongoing support and updates
+    User --> User Satisfaction: Achieves improved security posture and peace of mind
+
+    section Feedback
+    User --> Sensible Cyber Solutions: Provides feedback and shares success stories
+
+```
+
+
+
+
 # The step by step guide for this Framework
 Harnessing the Power of the Framework: A Step-by-Step Guide
 
