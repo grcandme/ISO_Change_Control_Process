@@ -17,7 +17,7 @@ Introduction to Malware Development Workshop
 - Reviewing different filetypes commonly used in malware
 - Exploring various execution methods for effective delivery and execution
 - Examining techniques to bypass security mechanisms
-- Q&A session
+- Q&A session 
 ---
 ## Week 3: Shellcode Execution and Injection
 - Understanding the concept of shellcode and its significance in malware development
